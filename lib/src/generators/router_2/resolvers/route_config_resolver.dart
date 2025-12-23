@@ -16,7 +16,7 @@ const TypeChecker autoRouteChecker = TypeChecker.fromUrl(
   'package:stacked_shared/src/code_generation/stacked_app.dart#StackedApp',
 );
 
-const TypeChecker stackedRouteChecker = TypeChecker.fromRuntime(StackedRoute);
+const TypeChecker stackedRouteChecker = TypeChecker.typeNamedLiterally('StackedRoute', inPackage: 'stacked_shared');
 
 const validMetaValues = [
   'String',
@@ -127,19 +127,19 @@ class RouteConfigResolver {
     ResolvedType? customRouteBuilder;
     ResolvedType? transitionBuilder;
     int? customRouteBarrierColor;
-    if (stackedRoute.instanceOf(const TypeChecker.fromRuntime(MaterialRoute))) {
+    if (stackedRoute.instanceOf(const TypeChecker.typeNamedLiterally('MaterialRoute', inPackage: 'stacked_shared'))) {
       routeType = RouteType.material;
     } else if (stackedRoute
-        .instanceOf(const TypeChecker.fromRuntime(CupertinoRoute))) {
+        .instanceOf(const TypeChecker.typeNamedLiterally('CupertinoRoute', inPackage: 'stacked_shared'))) {
       routeType = RouteType.cupertino;
       cupertinoNavTitle = stackedRoute.peek('title')?.stringValue;
     } else if (stackedRoute
-        .instanceOf(const TypeChecker.fromRuntime(AdaptiveRoute))) {
+        .instanceOf(const TypeChecker.typeNamedLiterally('AdaptiveRoute', inPackage: 'stacked_shared'))) {
       routeType = RouteType.adaptive;
       cupertinoNavTitle = stackedRoute.peek('cupertinoPageTitle')?.stringValue;
       customRouteOpaque = stackedRoute.peek('opaque')?.boolValue;
     } else if (stackedRoute
-        .instanceOf(const TypeChecker.fromRuntime(CustomRoute))) {
+        .instanceOf(const TypeChecker.typeNamedLiterally('CustomRoute', inPackage: 'stacked_shared'))) {
       routeType = RouteType.custom;
       durationInMilliseconds =
           stackedRoute.peek('durationInMilliseconds')?.intValue;
