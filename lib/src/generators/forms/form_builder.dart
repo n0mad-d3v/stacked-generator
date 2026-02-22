@@ -414,7 +414,7 @@ class FormBuilder with StringBufferUtils {
     """);
     if (fields.onlyTextFieldConfigs.isNotEmpty) {
       writeLine("""
-    if (!_autoTextFieldValidation) this.validateForm();
+    if (!_autoTextFieldValidation) this.validateFormSilently();
 """);
     }
     writeLine("""
@@ -580,6 +580,26 @@ class FormBuilder with StringBufferUtils {
         );
       }
       writeLine('''});''');
+      writeLine('}');
+
+      newLine();
+      writeLine(
+        '''
+      /// Validates text input fields on the Form without notifying listeners.
+      /// Safe to call during build.
+      void validateFormSilently() {
+        final messages = <String, String?>{''',
+      );
+
+      for (final field in fields.onlyTextFieldConfigs) {
+        final caseName = ReCase(field.name);
+        writeLine(
+          '''${_getFormKeyName(caseName)}: getValidationMessage(${_getFormKeyName(caseName)}),''',
+        );
+      }
+      writeLine('''};''');
+      writeLine('''messages.removeWhere((key, value) => value == null);''');
+      writeLine('''this.fieldsValidationMessages = messages;''');
       writeLine('}');
     }
 
