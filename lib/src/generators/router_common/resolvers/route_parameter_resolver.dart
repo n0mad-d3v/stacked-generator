@@ -4,7 +4,6 @@ import 'package:source_gen/source_gen.dart';
 import 'package:stacked_generator/src/generators/router_common/models/route_parameter_config.dart';
 import 'package:stacked_generator/src/generators/router_common/resolvers/type_resolver.dart';
 import 'package:stacked_generator/utils.dart';
-import 'package:stacked_shared/stacked_shared.dart';
 
 const _pathParamChecker = TypeChecker.typeNamedLiterally('PathParam', inPackage: 'stacked_shared');
 const _queryParamChecker = TypeChecker.typeNamedLiterally('QueryParam', inPackage: 'stacked_shared');

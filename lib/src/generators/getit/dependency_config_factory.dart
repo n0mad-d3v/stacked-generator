@@ -7,7 +7,6 @@ import 'package:stacked_generator/src/generators/getit/dependency_config/factory
 import 'package:stacked_generator/src/generators/getit/dependency_config/presolve_singleton_dependency.dart';
 import 'package:stacked_generator/src/generators/getit/dependency_config/singleton_dependency.dart';
 import 'package:stacked_generator/src/generators/getit/stacked_locator_parameter_resolver.dart';
-import 'package:stacked_shared/stacked_shared.dart';
 
 import '../../../utils.dart';
 import 'dependency_config/dependency_config.dart';
