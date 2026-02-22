@@ -1,6 +1,6 @@
 // ignore_for_file: unnecessary_this
 
-import 'package:analyzer/dart/element/element2.dart';
+import 'package:analyzer/dart/element/element.dart';
 
 /// Described a single field to be generated.
 ///
@@ -55,12 +55,12 @@ class ExecutableElementData {
   });
 
   factory ExecutableElementData.fromExecutableElement(
-      ExecutableElement2 executableElement) {
+      ExecutableElement executableElement) {
     return ExecutableElementData(
       returnType: executableElement.firstFragment.element.returnType.toString(),
-      enclosingElementName: executableElement.enclosingElement2?.name3,
+      enclosingElementName: executableElement.enclosingElement?.name,
       hasEnclosingElementName:
-          executableElement.enclosingElement2?.name3 != null,
+          executableElement.enclosingElement?.name != null,
       validatorName: executableElement.validatorName,
       validatorPath: executableElement.validatorPath,
     );
@@ -78,12 +78,12 @@ extension ListOfFieldConfigs on List<FieldConfig> {
       this.whereType<DropdownFieldConfig>().map((t) => t).toList();
 }
 
-extension ExecutableElementDataExtension on ExecutableElement2? {
+extension ExecutableElementDataExtension on ExecutableElement? {
   String? get validatorPath =>
       this?.firstFragment.libraryFragment.source.uri.toString();
   String? get validatorName => hasEnclosingElementName
-      ? '$enclosingElementName.${this?.name3}'
-      : this?.name3;
+      ? '$enclosingElementName.${this?.name}'
+      : this?.name;
   bool get hasEnclosingElementName => enclosingElementName != null;
-  String? get enclosingElementName => this?.enclosingElement2?.name3;
+  String? get enclosingElementName => this?.enclosingElement?.name;
 }
