@@ -1,3 +1,17 @@
+## [2.0.4](https://github.com/Stacked-Org/generator/compare/v2.0.3...v2.0.4) (2026-06-18)
+
+
+### Bug Fixes
+
+* **deps:** update dependency analyzer to v14 ([#75](https://github.com/Stacked-Org/generator/issues/75)) ([c4d8ea6](https://github.com/Stacked-Org/generator/commit/c4d8ea6aa2880061cda17b1b9e012f7ebc60bc5c))
+
+## [2.0.3](https://github.com/Stacked-Org/generator/compare/v2.0.2...v2.0.3) (2026-04-22)
+
+
+### Bug Fixes
+
+* **deps:** update dependency analyzer to v13 ([#73](https://github.com/Stacked-Org/generator/issues/73)) ([179b30e](https://github.com/Stacked-Org/generator/commit/179b30e207e51a0555f51623cb94e4750b81e1be))
+
 ## [2.0.2](https://github.com/Stacked-Org/generator/compare/v2.0.1...v2.0.2) (2026-04-07)
 
 
