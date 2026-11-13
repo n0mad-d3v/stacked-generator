@@ -91,7 +91,7 @@ class FormBuilderAstValidator {
   static void validateFormImports(String generatedCode) {
     final unit = AstHelper.parseCode(generatedCode);
     
-    expect(AstHelper.hasImport(unit, 'package:flutter/material.dart'), 
+    expect(AstHelper.hasImport(unit, 'package:material_ui/material_ui.dart'), 
         isTrue, reason: 'Should import Flutter material');
     expect(AstHelper.hasImport(unit, 'package:stacked/stacked.dart'), 
         isTrue, reason: 'Should import Stacked');

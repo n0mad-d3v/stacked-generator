@@ -41,9 +41,9 @@ void main() {
         expect(generator.notAliasedImports, isEmpty);
         
         // Imports list should be mutable for adding import strings
-        generator.notAliasedImports.add('package:flutter/material.dart');
+        generator.notAliasedImports.add('package:material_ui/material_ui.dart');
         expect(generator.notAliasedImports.length, equals(1));
-        expect(generator.notAliasedImports.first, equals('package:flutter/material.dart'));
+        expect(generator.notAliasedImports.first, equals('package:material_ui/material_ui.dart'));
       });
     });
 
@@ -54,7 +54,7 @@ void main() {
         
         // Add some mock data to simulate usage
         generator.notAliasedImports.addAll([
-          'package:flutter/material.dart',
+          'package:material_ui/material_ui.dart',
           'package:stacked/stacked.dart',
         ]);
         

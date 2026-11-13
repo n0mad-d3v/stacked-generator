@@ -12,7 +12,7 @@ import 'root_router_builder.dart';
 import 'route_info_builder.dart';
 
 const stackedImport = 'package:stacked/stacked.dart';
-const materialImport = 'package:flutter/material.dart';
+const materialImport = 'package:material_ui/material_ui.dart';
 const foundationImport = 'package:flutter/foundation.dart';
 
 const Reference stringRefer = Reference('String');

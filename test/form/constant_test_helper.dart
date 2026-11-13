@@ -2,7 +2,7 @@
 
 const ksFormImports = '''
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:stacked/stacked.dart';
 
 
@@ -253,7 +253,7 @@ const kExample1AddHeaderComment = '''
 const kExample1AddImports = '''
 
 import 'controllers/path';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:stacked/stacked.dart';
 import 'validators/path';
 

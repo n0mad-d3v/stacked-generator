@@ -22,7 +22,7 @@ class CupertinoRouteConfig extends RouteConfig {
   Code registerRoute() {
     return super.getRouteRegisterCode(
         routeType: 'CupertinoPageRoute',
-        routeTypeImport: 'package:flutter/cupertino.dart',
+        routeTypeImport: 'package:cupertino_ui/cupertino_ui.dart',
         extra: cupertinoNavTitle != null
             ? Code("title:'$cupertinoNavTitle',")
             : null);

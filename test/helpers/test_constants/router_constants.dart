@@ -1,6 +1,6 @@
 const kRouterWithNamePathNameClassName = '''
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:stacked/stacked.dart' as _i1;
 import 'package:stacked_services/stacked_services.dart' as _i3;
 
@@ -68,7 +68,7 @@ extension NavigatorStateExtension on _i3.NavigationService {
 
 const kRouterWithNestedRouter = '''
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:stacked/stacked.dart' as _i1;
 import 'package:stacked_services/stacked_services.dart' as _i4;
 
@@ -194,7 +194,7 @@ extension NavigatorStateExtension on _i4.NavigationService {
 
 const kRouterWithAliasedImport = '''
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:stacked/stacked.dart' as _i1;
 import 'package:stacked_services/stacked_services.dart' as _i4;
 
@@ -285,8 +285,8 @@ extension NavigatorStateExtension on _i4.NavigationService {
 ''';
 const kParameterTypeString = '''
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:flutter/material.dart' as _i3;
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart' as _i3;
+import 'package:material_ui/material_ui.dart';
 import 'package:stacked/stacked.dart' as _i1;
 import 'package:stacked_services/stacked_services.dart' as _i4;
 
@@ -377,8 +377,8 @@ extension NavigatorStateExtension on _i4.NavigationService {
 ''';
 const kRouterMixin = '''
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:flutter/cupertino.dart' as _i8;
-import 'package:flutter/material.dart';
+import 'package:cupertino_ui/cupertino_ui.dart' as _i8;
+import 'package:material_ui/material_ui.dart';
 import 'package:stacked/stacked.dart' as _i1;
 import 'package:stacked_services/stacked_services.dart' as _i10;
 
@@ -693,7 +693,7 @@ const kImportsWithoutAliasesTest = '''
 import 'package:importone.dart';
 import 'package:importtwo.dart';
 import 'package:ClashTypeOne/ClashType.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:ClashTypeTwo/ClashType.dart';
 import 'package:stacked/stacked.dart';
 import 'package:stacked_services/stacked_services.dart';
@@ -707,7 +707,7 @@ const kImportsWithAliasesTest = '''
 
 import 'package:ClashTypeOne/ClashType.dart' as i_0;
 import 'package:ClashTypeTwo/ClashType.dart' as i_1;
-import 'package:flutter/material.dart' as i_2;
+import 'package:material_ui/material_ui.dart' as i_2;
 import 'package:importone.dart' as i_3;
 import 'package:importtwo.dart' as i_4;
 import 'package:stacked/stacked.dart' as i_5;
@@ -801,7 +801,7 @@ const kMapOfPages = '''
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:stacked/stacked.dart' as _i1;
 import 'ui/login_class.dart' as _i2;
-import 'package:flutter/material.dart' as _i3;
+import 'package:material_ui/material_ui.dart' as _i3;
 import 'ui/home_class.dart' as _i4;
 
 final _pagesMap = <Type, _i1.StackedRouteFactory>{

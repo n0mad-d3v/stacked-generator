@@ -153,12 +153,12 @@ mixin class RouterClassBuilderHelper {
     if (route.routeType == RouteType.material) {
       return route.getRouteRegisterCode(
         routeType: 'MaterialPageRoute',
-        routeTypeImport: 'package:flutter/material.dart',
+        routeTypeImport: 'package:material_ui/material_ui.dart',
       );
     } else if (route.routeType == RouteType.custom) {
       return route.getRouteRegisterCode(
         routeType: 'PageRouteBuilder',
-        routeTypeImport: 'package:flutter/material.dart',
+        routeTypeImport: 'package:material_ui/material_ui.dart',
         usePageBuilder: true,
         extra: Block.of([
           if (!(route.customRouteOpaque ?? false))
@@ -189,7 +189,7 @@ mixin class RouterClassBuilderHelper {
     } else if (route.routeType == RouteType.cupertino) {
       return route.getRouteRegisterCode(
           routeType: 'CupertinoPageRoute',
-          routeTypeImport: 'package:flutter/cupertino.dart',
+          routeTypeImport: 'package:cupertino_ui/cupertino_ui.dart',
           extra: route.cupertinoNavTitle != null
               ? Code("title:'${route.cupertinoNavTitle}',")
               : null);

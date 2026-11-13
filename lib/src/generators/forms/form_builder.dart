@@ -32,7 +32,7 @@ class FormBuilder with StringBufferUtils {
   FormBuilder addImports() {
     // write route imports
     final imports = <String>{
-      "package:flutter/material.dart",
+      "package:material_ui/material_ui.dart",
       "package:stacked/stacked.dart"
     };
 

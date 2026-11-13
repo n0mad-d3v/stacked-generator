@@ -57,7 +57,7 @@ class RouterGenerator implements BaseGenerator {
       (b) => b
         ..directives.add(
           // No need to alias this import that's why we're adding it
-          Directive.import('package:flutter/material.dart'),
+          Directive.import('package:material_ui/material_ui.dart'),
         )
         ..body.addAll([...parsedClasses, navigationExtensionClassBuilder]),
     );
